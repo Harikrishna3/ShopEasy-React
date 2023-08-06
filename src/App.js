@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/pages/About";
 import Services from "./components/pages/Services";
 import Contact from "./components/pages/Contact";
-import Home from "./components/pages/Home";
 import Homepage from "./components/Homepage/Homepage";
 import { Provider } from "react-redux";
 import store from "./store/store";
