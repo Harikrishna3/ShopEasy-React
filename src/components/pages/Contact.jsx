@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Contact = () => {
   return (
     <div>
@@ -48,15 +50,15 @@ const Contact = () => {
 
       <div>
         <h2 style={{ textAlign: 'center' }}>Frequently Asked Questions (FAQs):</h2>
-        <p style={{ textAlign: 'center' }}>Before reaching out, you might find the answer to your question in our Frequently Asked Questions section. Check it out <a href="#">here</a>.</p>
+        <p style={{ textAlign: 'center' }}>Before reaching out, you might find the answer to your question in our Frequently Asked Questions section. Check it out <Link>here</Link>.</p>
         <h2 style={{ textAlign: 'center' }}>Social Media:</h2>
         <p style={{ textAlign: 'center' }}>Stay connected with us on social media to receive updates, promotions, and exciting offers:</p>
       </div>
 
       <p style={{ textAlign: 'center' }}>
-        Facebook: <a href="#">[Link to Facebook Page]</a><br />
-        Instagram: <a href="#">[Link to Instagram Profile]</a><br />
-        Twitter: <a href="#">[Link to Twitter Profile]</a>
+        Facebook: <Link >[Link to Facebook Page]</Link><br />
+        Instagram: <Link>[Link to Instagram Profile]</Link><br />
+        Twitter: <Link>[Link to Twitter Profile]</Link>
       </p>
 
       <div>

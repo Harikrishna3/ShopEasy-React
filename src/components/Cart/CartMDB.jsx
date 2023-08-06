@@ -19,6 +19,7 @@ import {
   remove,
 } from "../../store/cartSlice";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 export default function QuantityEdit() {
   const navigate = useNavigate();
@@ -51,6 +52,8 @@ export default function QuantityEdit() {
   };
 
   return (
+    <>
+    {/* <Navbar/> */}
     <section className="h-100 h-custom" style={{ backgroundColor: "#fefefe" }}>
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
@@ -229,5 +232,6 @@ export default function QuantityEdit() {
         </MDBRow>
       </MDBContainer>
     </section>
+    </>
   );
 }
