@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Navbar />
-        {/* <Homepage/> */}
+        
+        <Homepage/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />

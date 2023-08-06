@@ -33,6 +33,7 @@ const Homepage = () => {
   return (
     <div className="App1">
       {/* <h1>Homepage</h1> */}
+      <Navbar />
       <img
         style={{
           width: "80%",
@@ -45,7 +46,8 @@ const Homepage = () => {
           border: "2px solid black",
           // marginRight: "auto",
         }}
-        src="/photos/50off.png"
+        src="./ShopEasy-React/photos/50off.png"
+  
         alt="heropage"
         srcset=""
       />
