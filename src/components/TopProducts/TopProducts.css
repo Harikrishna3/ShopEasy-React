@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+.TopProducts {
+  background-color: #fefefe;
+  margin: 0 5rem;
+}
+.CardTitle {
+  font-family: "Oswald";
+  font-size: 25px;
+}
+.ProductCard {
+  background-color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  transition: transform 0.2s ease;
+}
+.ProductCard:hover {
+  transform: translateY(-5px);
+}
+
+.ProductCard .CardImage {
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.price {
+  font-family: "Oswald";
+  font-size: 25px;
+  font-weight: bolder;
+}
