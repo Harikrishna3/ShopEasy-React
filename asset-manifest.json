@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ShopEasy-React/static/css/main.2784942e.css",
-    "main.js": "/ShopEasy-React/static/js/main.b02beb2b.js",
+    "main.js": "/ShopEasy-React/static/js/main.6b402620.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/ShopEasy-React/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fa-solid-900.ttf": "/ShopEasy-React/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/ShopEasy-React/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -20,10 +20,10 @@
     "static/media/fa-v4compatibility.woff2": "/ShopEasy-React/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/ShopEasy-React/index.html",
     "main.2784942e.css.map": "/ShopEasy-React/static/css/main.2784942e.css.map",
-    "main.b02beb2b.js.map": "/ShopEasy-React/static/js/main.b02beb2b.js.map"
+    "main.6b402620.js.map": "/ShopEasy-React/static/js/main.6b402620.js.map"
   },
   "entrypoints": [
     "static/css/main.2784942e.css",
-    "static/js/main.b02beb2b.js"
+    "static/js/main.6b402620.js"
   ]
 }
