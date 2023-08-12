@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { useEffect } from "react";
 
 const Contact = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag('event', 'page_view', {
+      page_title: "Contact Us",
+      page_path: "/contactUs",
+      page_location: window.location.href
+    })
+  }, [location]);
   return (
     <div>
       <div>

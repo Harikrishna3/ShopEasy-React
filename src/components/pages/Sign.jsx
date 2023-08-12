@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
 const Sign = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.gtag('event', 'page_view', {
+            page_title: "Sign In",
+            page_path: "/signIn",
+            page_location: window.location.href
+        })
+    }, [location]);
     return (
         <div>
             <header style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '1rem' }}>

@@ -10,6 +10,15 @@ const ProductPage = () => {
   const location = useLocation();
   const Dispatch = useDispatch();
   const [products, setProducts] = useState();
+
+  useEffect(() => {
+    window.gtag('event', 'page_view', {
+      page_title: "Cart Page",
+      page_path: "/cart",
+      page_location: window.location.href
+    })
+  }, [location]);
+
   const fetchInfo = async () => {
     return axios
       .get(
@@ -30,6 +39,11 @@ const ProductPage = () => {
   });
 
   const navigateProductPage = (product) => {
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "product Card Clicked",
+      event_clickedProduct: product.title,
+    })
     Navigate("/productPage", {
       state: {
         product: product,
@@ -38,6 +52,11 @@ const ProductPage = () => {
   };
 
   const handleAddtoCart = (product) => {
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "cart button clicked",
+      event_addedProduct: product.title,
+    })
     Dispatch(add(product));
   };
 

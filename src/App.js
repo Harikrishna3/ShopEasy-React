@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import About from "./components/pages/About";
 import Services from "./components/pages/Services";
@@ -11,13 +11,23 @@ import Filter from "./components/Filter/Filter";
 import ProductPage from "./components/ProductPage/ProductPage";
 import Sign from "./components/pages/Sign";
 import Navbar from "./components/Navbar/Navbar";
+import { useEffect } from "react";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag("event", "page_view", {
+      page_title: "home",
+      page_path: "/",
+      page_location: window.location.href,
+    });
+  }, [location]);
   return (
     <div className="App">
       <Provider store={store}>
-      <Navbar/>
-        
+        <Navbar />
+
         {/* <Homepage/> */}
         <Routes>
           <Route exact path="/" element={<Homepage />} />

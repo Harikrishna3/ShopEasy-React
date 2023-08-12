@@ -38,6 +38,11 @@ const Filter = () => {
 
   const handleAddtoCart = (event, product) => {
     event.stopPropagation();
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "cart button clicked",
+      event_addedProduct: product.title,
+    })
     Dispatch(add(product));
   };
 
@@ -63,6 +68,11 @@ const Filter = () => {
   };
 
   const navigateProductPage = (product) => {
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "product Card Clicked",
+      event_clickedProduct: product.title,
+    })
     Navigate("/productPage", {
       state: {
         product: product,
@@ -112,37 +122,37 @@ const Filter = () => {
                         data-mdb-ripple-color="light"
                       >
                         <div className="px-4 pt-5" >
-                          <img src={product.image} className="w-100" alt="ProductImage"/>
+                          <img src={product.image} className="w-100" alt="ProductImage" />
 
                         </div>
-                       
-                          <div className="mask">
-                            <div className="d-flex justify-content-start align-items-end h-100">
-                              {product.id === 1 && (
-                                <h5>
-                                  <span className="badge bg-dark ms-2">
-                                    NEW
-                                  </span>
-                                </h5>
-                              )}
-                              {product.id === 2 && (
-                                <h5>
-                                  <span class="badge bg-primary ms-2">
-                                    bestseller
-                                  </span>
-                                </h5>
-                              )}
-                            </div>
+
+                        <div className="mask">
+                          <div className="d-flex justify-content-start align-items-end h-100">
+                            {product.id === 1 && (
+                              <h5>
+                                <span className="badge bg-dark ms-2">
+                                  NEW
+                                </span>
+                              </h5>
+                            )}
+                            {product.id === 2 && (
+                              <h5>
+                                <span class="badge bg-primary ms-2">
+                                  bestseller
+                                </span>
+                              </h5>
+                            )}
                           </div>
-                          <div className="hover-overlay">
-                            <div
-                              className="mask"
-                              style={{
-                                backgroundcolor: "rgba(251, 251, 0.15)",
-                              }}
-                            />
-                          </div>
-                       
+                        </div>
+                        <div className="hover-overlay">
+                          <div
+                            className="mask"
+                            style={{
+                              backgroundcolor: "rgba(251, 251, 0.15)",
+                            }}
+                          />
+                        </div>
+
                       </div>
                       <div className="card-body">
                         <a href className="text-reset">

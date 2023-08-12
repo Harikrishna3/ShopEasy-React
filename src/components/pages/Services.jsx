@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag('event', 'page_view', {
+      page_title: "Services",
+      page_path: "/services",
+      page_location: window.location.href
+    })
+  }, [location]);
   return (
 
     <div style={{ padding: "0 80px" }}>

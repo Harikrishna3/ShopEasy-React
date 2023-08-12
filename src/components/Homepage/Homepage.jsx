@@ -1,4 +1,3 @@
-import Navbar from "../Navbar/Navbar";
 import TopProducts from "../TopProducts/TopProducts";
 import "./Homepage.css";
 import Filter from "../Filter/Filter";
@@ -20,7 +19,7 @@ const Homepage = () => {
           border: "2px solid black",
         }}
         src="photos/50off.png"
-  
+
         alt="heropage"
         srcset=""
       />

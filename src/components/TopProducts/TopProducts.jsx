@@ -5,7 +5,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./TopProducts.css"
 import { useDispatch } from "react-redux";
 import { add } from "../../store/cartSlice";
@@ -32,12 +32,25 @@ const TopProducts = () => {
     fetchInfo();
   }, []);
 
-  const handleAddtoCart = (event, product) => {
-    event.stopPropagation();
+  const handleAddtoCart = (e, product) => {
+    e.stopPropagation();
+
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "cart button clicked",
+      event_addedProduct: product.title,
+    })
+
+
     Dispatch(add(product));
   }
 
   const navigateProductPage = (product) => {
+    window.gtag('event', 'click', {
+      event_category: "Button",
+      event_label: "product Card Clicked",
+      event_clickedProduct: product.title,
+    })
     Navigate("/productPage", {
       state: {
         product: product,
@@ -54,7 +67,7 @@ const TopProducts = () => {
       items: 5,
       slidesToSlide: 3,
     },
-    desktop: {
+    Largedesktop: {
       breakpoint: { max: 1250, min: 1024 },
       items: 4,
       slidesToSlide: 3,

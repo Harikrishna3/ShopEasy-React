@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag('event', 'page_view', {
+      page_title: "About",
+      page_path: "/about",
+      page_location: window.location.href
+    })
+  }, [location]);
   return (
     <div>
       <header style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '1rem' }}>
