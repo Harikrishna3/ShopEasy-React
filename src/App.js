@@ -17,12 +17,14 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
     window.gtag("event", "page_view", {
       page_title: "home",
       page_path: "/",
       page_location: window.location.href,
-    });
+    });}
   }, [location]);
+
   return (
     <div className="App">
       <Provider store={store}>

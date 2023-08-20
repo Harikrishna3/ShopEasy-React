@@ -11,7 +11,8 @@
 .filter {
   flex: 1;
   padding: 20px;
-  margin-left: 70px;
+  margin-top: 80px;
+  margin-left: 90px;
   border-right: 1px solid #eaeaea;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -66,8 +67,9 @@
 }
 
 .ProductTitle {
+  font-size: 3rem;
   padding-left: 8rem;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   color: #000;
 }
 /* 
