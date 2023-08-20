@@ -3,7 +3,7 @@ import "./Filter.css";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -155,15 +155,15 @@ const Filter = () => {
 
                       </div>
                       <div className="card-body">
-                        <a href className="text-reset">
+                        <Link href className="text-reset">
                           <h5 className="card-title mb-2">
                             {product.title.slice(0, 20)}
                           </h5>
-                        </a>
-                        <a className="text-reset ">
+                        </Link>
+                        <Link className="text-reset ">
                           <p>{product.category}</p>
-                        </a>
-                        <a className="text-reset ">
+                        </Link>
+                        <Link className="text-reset ">
                           <p style={{ marginBottom: "0px" }}>Rating</p>
                           <div
                             class="stars"
@@ -174,7 +174,7 @@ const Filter = () => {
                           >
                             <div class="bg">⭐⭐⭐⭐⭐</div>
                           </div>
-                        </a>
+                        </Link>
                         <h6
                           style={{ marginTop: "10px" }}
                           className="mb-3 price"
