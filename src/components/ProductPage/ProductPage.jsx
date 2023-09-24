@@ -32,7 +32,7 @@ const ProductPage = () => {
   };
   useEffect(() => {
     fetchInfo();
-  }, []);
+  }, [location]);
 
   useEffect(() => {
     onTop();

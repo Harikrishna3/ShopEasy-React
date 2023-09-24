@@ -47,13 +47,13 @@ nav ul li input {
     
     /* padding: 0.1rem; */
   /* margin:  0.5rem 0;  */
-  padding: 10px;
-  margin-left: 5rem;
-  font-size: 14px;
+  padding: 12px;
+  /* margin-left: 5rem; */
+  font-size: 19px;
   border: none;
-  width: 300px;
-  outline: 0;
-  border-bottom: 2px solid black;
+  width: 350px;
+  /* outline: 0; */
+  /* border-bottom: 2px solid black; */
 }
 
 nav ul li .search-container button {
